@@ -11,12 +11,15 @@ import com.ms2.banco.domain.Consulta;
 import com.ms2.banco.services.ObtenerBancoService;
 
 
-
 @RestController
 public class bancoController {
 	
-	@Autowired
 	private ObtenerBancoService bancoService;
+	
+	@Autowired
+	public void setBancoService(ObtenerBancoService bancoService) {
+		this.bancoService = bancoService;
+	}
 
 	@RequestMapping(path = "/getBanks", method = RequestMethod.POST)
 	public Consulta getBanks(@RequestBody Consulta consult){
