@@ -1,6 +1,8 @@
 package com.ms2.banco.controllers;
 
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,8 +23,8 @@ public class bancoController {
 		this.bancoService = bancoService;
 	}
 
-	@RequestMapping(path = "/getBanks", method = RequestMethod.POST)
-	public Consulta getBanks(@RequestBody Consulta consult){
+	@RequestMapping(path = "/bancos", method = RequestMethod.GET)
+	public Consulta getBanks(@Valid Consulta consult){
 		return bancoService.getBancos(consult);
 	}
 		
