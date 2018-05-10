@@ -27,7 +27,7 @@ public class BancoDAOImpl implements BancoDAO {
 		ObjectMapper mapper = new ObjectMapper();
 		
 		try {
-			File file = new File("C:\\Users\\JesusMonroyAngeles\\Documents\\Ejercicio Banco\\bancos.json");
+			File file = new File("/Users/jesus/Dropbox/IBM/workspace-course/ms2-json-banks/src/main/resources/bancos.json");
 			Scanner sc = new Scanner(file);
 			
 			while (sc.hasNextLine()) {
