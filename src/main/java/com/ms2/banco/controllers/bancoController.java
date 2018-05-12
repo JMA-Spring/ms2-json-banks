@@ -27,5 +27,5 @@ public class bancoController {
 	public Consulta getBanks(@Valid Consulta consult){
 		return bancoService.getBancos(consult);
 	}
-		
+		 
 }
