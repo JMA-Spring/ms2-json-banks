@@ -13,6 +13,8 @@ import org.springframework.stereotype.Repository;
 
 import com.ms2.banco.domain.Banco;
 
+import static org.springframework.util.ResourceUtils.getFile;
+
 @Repository
 public class BancoDAOImpl implements BancoDAO {
 	
@@ -22,12 +24,12 @@ public class BancoDAOImpl implements BancoDAO {
 	public BancoDAOImpl () {
 		loadBancos();
 	}
-	
+
 	private void loadBancos() {
 		ObjectMapper mapper = new ObjectMapper();
 		
 		try {
-			File file = new File("/Users/jesus/Dropbox/IBM/workspace-course/ms2-json-banks/src/main/resources/bancos.json");
+			File file = new File("C:\\Users\\Jesus Monroy\\Dropbox\\IBM\\Spring-Course\\ms2-json-banks\\src\\main\\resources\\bancos.json");
 			Scanner sc = new Scanner(file);
 			
 			while (sc.hasNextLine()) {
