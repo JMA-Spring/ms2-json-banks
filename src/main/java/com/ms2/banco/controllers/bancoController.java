@@ -16,12 +16,10 @@ import com.ms2.banco.services.ObtenerBancoService;
 @RestController
 public class bancoController {
 	
+	@Autowired
 	private ObtenerBancoService bancoService;
 	
-	@Autowired
-	public void setBancoService(ObtenerBancoService bancoService) {
-		this.bancoService = bancoService;
-	}
+	
 
 	@RequestMapping(path = "/bancos", method = RequestMethod.GET)
 	public Consulta getBanks(@Valid Consulta consult){
